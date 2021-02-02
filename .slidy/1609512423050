@@ -1,0 +1,5 @@
+lib/app/modules/shopping_cart/shopping_cart_module.dart
+lib/app/modules/shopping_cart/shopping_cart_page.dart
+test/app/modules/shopping_cart/shopping_cart_page_test.dart
+lib/app/modules/shopping_cart/shopping_cart_controller.dart
+test/app/modules/shopping_cart/shopping_cart_controller_test.dart
