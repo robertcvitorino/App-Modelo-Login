@@ -12,23 +12,29 @@ class LogoApp extends StatelessWidget {
   final String image;
 
   //Construtor da classe
-  const LogoApp(
-      {Key key,
-      this.imageWidth = 0.6,
-      this.imageHeight = 0.4,
-      this.paddingTop = 5,
-      this.paddingBottom = 5,
-      this.image})
-      : super(key: key);
+  const LogoApp({
+    Key key,
+    this.imageWidth = 0.6,
+    this.imageHeight = 0.4,
+    this.paddingTop = 5,
+    this.paddingBottom = 5,
+    this.image,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.only(top: paddingTop, bottom: paddingBottom),
+    return Center(
+      child: Padding(
+        padding: EdgeInsets.only(
+          top: paddingTop,
+          bottom: paddingBottom,
+        ),
         child: Container(
           width: MediaQuery.of(context).size.width * imageWidth,
           height: MediaQuery.of(context).size.height * imageHeight,
           child: Image.asset(image),
-        ));
+        ),
+      ),
+    );
   }
 }

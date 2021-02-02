@@ -19,7 +19,7 @@ class ButtonMaterial extends StatelessWidget {
       {Key key,
       this.onPressed,
       this.textButton = 'Insira um name',
-      this.buttonColor = Colors.orange,
+      this.buttonColor = Colors.purple,
       this.textColor = Colors.white,
       this.buttonWidth = 0.6,
       this.buttonHeight = 0.06,
@@ -36,7 +36,7 @@ class ButtonMaterial extends StatelessWidget {
       padding: EdgeInsets.only(top: paddingTop, bottom: paddingBottom),
       child: Material(
         elevation: buttonElevation,
-        color: Colors.orange,
+        color: buttonColor,
         shadowColor: Colors.grey[400],
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderButton)),

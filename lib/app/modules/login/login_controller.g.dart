@@ -65,6 +65,28 @@ mixin _$LoginController on _LoginControllerBase, Store {
   }
 
   @override
+  dynamic login() {
+    final _$actionInfo = _$_LoginControllerBaseActionController.startAction(
+        name: '_LoginControllerBase.login');
+    try {
+      return super.login();
+    } finally {
+      _$_LoginControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  dynamic createAccount() {
+    final _$actionInfo = _$_LoginControllerBaseActionController.startAction(
+        name: '_LoginControllerBase.createAccount');
+    try {
+      return super.createAccount();
+    } finally {
+      _$_LoginControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 usuaro: ${usuaro},

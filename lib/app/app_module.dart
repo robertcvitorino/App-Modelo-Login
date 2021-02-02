@@ -1,6 +1,6 @@
-import 'package:poupe_pila/app/modules/home/home_controller.dart';
+import 'package:poupe_pila/app/modules/create_account/create_account_module.dart';
 import 'package:poupe_pila/app/modules/login/login_module.dart';
-
+import 'package:poupe_pila/app/modules/perfil/perfil_module.dart';
 import 'app_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +15,8 @@ class AppModule extends MainModule {
   List<ModularRouter> get routers => [
         ModularRouter(Modular.initialRoute, module: LoginModule()),
         ModularRouter('/home', module: HomeModule()),
+        ModularRouter('/CreateAccount', module: CreateAccountModule()),
+        ModularRouter('/perfil', module: PerfilModule())
       ];
 
   @override

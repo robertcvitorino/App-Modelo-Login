@@ -14,6 +14,7 @@ abstract class _LoginControllerBase with Store {
   //Seta variavel com valor
   @action
   changeName(String newUsuario) => usuaro = newUsuario;
+
   @observable
   String senha;
   @action
@@ -22,5 +23,10 @@ abstract class _LoginControllerBase with Store {
   @action
   login() {
     Modular.to.pushNamed('/home');
+  }
+
+  @action
+  createAccount() {
+    Modular.to.pushNamed('/CreateAccount');
   }
 }

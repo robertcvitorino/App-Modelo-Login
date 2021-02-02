@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:mobx/mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -6,12 +7,23 @@ part 'home_controller.g.dart';
 @Injectable()
 class HomeController = _HomeControllerBase with _$HomeController;
 
-abstract class _HomeControllerBase with Store {
+abstract class _HomeControllerBase with Store implements Disposable {
+  final pageViewController = PageController();
+  @override
+  void dispose() {
+    pageViewController.dispose();
+  }
+
   @observable
-  int value = 0;
+  int selectedIndex = 0;
 
   @action
-  void increment() {
-    value++;
+  void changePage(int index) {
+    selectedIndex = index;
+  }
+
+  @action
+  void pagePerfil() {
+    Modular.to.pushNamed('/perfil');
   }
 }

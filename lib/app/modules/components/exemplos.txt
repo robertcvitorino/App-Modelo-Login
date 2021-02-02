@@ -1,0 +1,37 @@
+Navigatin bar
+      bottomNavigationBar: CurvedNavigationBar(
+        items: [
+          Icon(Icons.home, size: 30),
+          Icon(Icons.list, size: 30),
+          Icon(Icons.favorite, size: 30),
+          Icon(Icons.perm_identity, size: 30),
+        ],
+        color: Colors.white,
+        buttonBackgroundColor: Colors.white,
+        backgroundColor: Colors.blueAccent,
+        animationCurve: Curves.easeInOut,
+        animationDuration: Duration(milliseconds: 200),
+        onTap: (index) {
+          setState(
+            () {
+              _page = index;
+            },
+          );
+        },
+        letIndexChange: (index) => true,
+      ),
+
+
+
+  child: TextFormField(
+              showCursor: true,
+              obscureText:
+                  buttonText == 'Senha' || buttonText == 'senha' ? true : false,
+              onChanged: onChange,
+              decoration: InputDecoration(
+                hintText: buttonText,
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
+              ),
+              keyboardType: inputType,
+            )
